@@ -4,7 +4,7 @@ The short version users see is on the app's Privacy page. This is what the code 
 
 ## On the device only
 
-Profile, plan, read and seen alerts, steps done, follows, receipts, reporter key.
+Profile, plan, read and seen alerts, steps done, follows, receipts, reporter key, and which usage counts it has already sent.
 
 ## On the server
 
@@ -17,6 +17,8 @@ Profile, plan, read and seen alerts, steps done, follows, receipts, reporter key
 | Agent token hash, address, country, types of money | Tell agents | Until disconnected |
 | Published alerts | The public record | Kept |
 | Admin audit log | Accountability | Kept |
+| Daily totals of opens, installs and setups, with no device, IP or profile | Know if Griot is used | Kept |
+| One time token per count, random and linked to nothing | Stop replayed counts | Two days |
 
 ## Never stored
 
@@ -24,7 +26,7 @@ Names of anonymous reporters, email, phone, balances, wallet addresses, how some
 
 ## Rules
 
-- No analytics or trackers.
+- No third party analytics or trackers. The only usage data is the daily totals above: a phone sends a +1 for an open (once a day), an install (once) and a setup (once), with a random one time token and no ID.
 - Fonts ship with the app, so users never contact Google for them.
 - Reports store a date, not a time, so they are harder to link to a person.
 - Follows stay on the device.

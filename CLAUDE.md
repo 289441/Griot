@@ -32,6 +32,7 @@ Next.js, TypeScript, Tailwind and Lucide on Vercel, with Postgres (`postgres` pa
 ## Rules
 
 - Profiles stay on the device. The server may only receive a device's country and types of money, for alert targeting, and only when alerts are on. Never names, balances, wallet addresses or how someone earns
+- Usage is counted only as anonymous daily totals (`lib/usage.ts`): no device ID, IP or profile
 - Anything that adds data to the server updates PRIVACY.md in the same change
 - Words stay short: a 7 year old should manage every screen
 - An alert never contains a wallet address, a recovery word request or an instruction to send funds. `lib/safety.ts` enforces this

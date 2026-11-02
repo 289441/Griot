@@ -6,6 +6,7 @@ import { syncTopics } from '../lib/push.ts'
 import { go, useRoute } from '../lib/router.ts'
 import { useData } from '../lib/storage.ts'
 import { refreshFeed } from '../lib/sync.ts'
+import { countVisit } from '../lib/usage.ts'
 import AlertDetail from './AlertDetail.tsx'
 import { AgentPage, CheckPage, LegalPage } from './ExtraPages.tsx'
 import Home from './Home.tsx'
@@ -50,6 +51,7 @@ function Main() {
     if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(console.error)
     }
+    countVisit(isInstalled()).catch(() => {})
   }, [])
 
   // Fetches the newest feed on opening and when returning after a while.

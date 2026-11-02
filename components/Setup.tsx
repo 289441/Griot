@@ -13,9 +13,10 @@ import { useState } from 'react'
 import { COUNTRIES } from '../lib/options.ts'
 import { enablePush, syncTopics } from '../lib/push.ts'
 import { go } from '../lib/router.ts'
-import { updateData } from '../lib/storage.ts'
+import { readData, updateData } from '../lib/storage.ts'
 import { btn, btnPrimary, title } from '../lib/styles.ts'
 import type { Holding } from '../lib/types.ts'
+import { countSetup } from '../lib/usage.ts'
 
 const screen =
   'mx-auto flex min-h-dvh w-full max-w-md animate-rise flex-col gap-5 px-5 pt-[calc(36px+env(safe-area-inset-top))] pb-[calc(24px+env(safe-area-inset-bottom))]'
@@ -61,6 +62,7 @@ export function CountrySelect({ value, onChange }: { value: string; onChange: (c
 
 // Saves the answers, updates alarm topics, and goes home.
 export function saveProfile(country: string, holdings: Holding[]) {
+  if (readData().profile === null) countSetup().catch(() => {})
   updateData((data) => ({ ...data, profile: { ...data.profile, country, holdings } }))
   syncTopics()
   go('')

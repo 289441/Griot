@@ -144,6 +144,7 @@ const LEGAL = {
       'No accounts, no email, no tracking.',
       'Your plan, progress and follows stay on your device.',
       'With alarms on, we store an anonymous device address, your country and money types.',
+      'We count opens, installs and setups as daily totals, never who.',
       'Reports keep the date, never the time or your IP address in our database.',
       'Our host, and Google or Apple who deliver alarms, can see basic connection details.',
       'Delete all my data removes everything we hold for this device.',

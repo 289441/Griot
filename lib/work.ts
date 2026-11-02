@@ -5,6 +5,7 @@ import { bytesToHex, utf8ToBytes } from '@noble/hashes/utils.js'
 export const SUBSCRIBE_BITS = 12
 export const REPORT_BITS = 16
 export const AGENT_BITS = 16
+export const COUNT_BITS = 12
 
 const DAY_MS = 24 * 60 * 60 * 1000
 const SLICE = 2048

@@ -11,6 +11,7 @@ import { alertMatches, computeRisk, stepKey } from './risk.ts'
 import { readAlertEvent, readNoticeEvent, readSignedFeed, signAlert, signNotice } from './signing.ts'
 import { cleanData, EMPTY_DATA } from './storage.ts'
 import type { Alert, AppData, Profile } from './types.ts'
+import { dueEvents, markCounted } from './usage.ts'
 import { updatedAgo } from './words.ts'
 
 const profile: Profile = {
@@ -290,5 +291,22 @@ describe('updated time', () => {
     expect(updatedAgo('2026-11-02T11:55:00Z', now)).toBe('Updated 5 min ago')
     expect(updatedAgo('2026-11-02T09:00:00Z', now)).toBe('Updated 3 h ago')
     expect(updatedAgo('2026-11-01T11:00:00Z', now)).toBe('Updated 1 day ago')
+  })
+})
+
+describe('usage counts', () => {
+  const none = { day: null, install: false, setup: false }
+
+  it('counts an open once a day', () => {
+    expect(dueEvents(none, '2026-11-02', false)).toEqual(['open'])
+    const counted = markCounted(none, 'open', '2026-11-02')
+    expect(dueEvents(counted, '2026-11-02', false)).toEqual([])
+    expect(dueEvents(counted, '2026-11-03', false)).toEqual(['open'])
+  })
+
+  it('counts an install once ever, and only when installed', () => {
+    const today = markCounted(none, 'open', '2026-11-02')
+    expect(dueEvents(today, '2026-11-02', true)).toEqual(['install'])
+    expect(dueEvents(markCounted(today, 'install', '2026-11-02'), '2026-11-09', true)).toEqual(['open'])
   })
 })
