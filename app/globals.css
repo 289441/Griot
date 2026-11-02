@@ -3,14 +3,16 @@
 
 @theme inline {
   /* Fonts come from next/font in layout.tsx */
-  --font-sans: var(--font-jakarta), "Segoe UI", sans-serif;
-  --font-display: var(--font-baloo), "Trebuchet MS", sans-serif;
+  --font-sans: var(--font-onest), "Segoe UI", sans-serif;
+  --font-display: var(--font-unbounded), "Arial Black", sans-serif;
 }
 
 @layer base {
   html {
     @apply font-sans;
     scroll-padding-bottom: 96px;
+    /* Our own pull to refresh replaces the browser's */
+    overscroll-behavior-y: contain;
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
   }

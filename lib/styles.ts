@@ -10,8 +10,8 @@ export const btnSevere = `${press} bg-danger text-on-accent shadow-elev-1`
 export const btnLink = 'inline-flex min-h-11 items-center font-bold text-info underline underline-offset-4'
 
 export const card = 'rounded-card bg-surface shadow-elev-1'
-export const title = 'font-display text-[30px] leading-[34px] font-extrabold'
-export const heading = 'font-display text-xl leading-6 font-bold'
+export const title = 'font-display text-2xl leading-[30px] font-bold text-balance'
+export const heading = 'font-display text-lg leading-6 font-semibold'
 
 const tagBase = 'inline-flex shrink-0 items-center rounded-chip px-2 py-0.5 text-xs leading-4 font-bold'
 

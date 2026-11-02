@@ -76,7 +76,7 @@ export default function AlertDetail({ id, alerts, data }: Props) {
       {backLink}
       {urgent && (
         <div data-theme="night" className="grid gap-3 rounded-card bg-ground p-5 text-ink">
-          <p className="animate-pop font-display text-[56px] leading-none font-extrabold text-danger">
+          <p className="animate-pop font-display text-[44px] leading-none font-bold text-danger">
             Act now
           </p>
           {data.plan.safePlace && (

@@ -42,7 +42,7 @@ export default function Welcome({ onStart }: { onStart: () => void }) {
         </p>
 
         <div className="flex flex-1 flex-col justify-center py-8">
-          <p className="font-display text-[clamp(84px,27vw,132px)] leading-[0.9] font-extrabold text-danger">
+          <p className="font-display text-[clamp(60px,18vw,96px)] leading-[0.95] font-bold tracking-tight text-danger">
             <span className="sr-only">$6.48 billion</span>
             <span aria-hidden className="num">
               ${amount.toFixed(2)}B
@@ -67,7 +67,7 @@ export default function Welcome({ onStart }: { onStart: () => void }) {
           </ul>
         </div>
 
-        <p className="mb-4 font-display text-3xl leading-8 font-extrabold text-balance">
+        <p className="mb-4 font-display text-2xl leading-8 font-bold text-balance">
           Get warned before it reaches you.
         </p>
         <button className={`${btnPrimary} w-full text-lg`} onClick={onStart}>

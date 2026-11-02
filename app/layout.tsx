@@ -1,13 +1,18 @@
 import type { Metadata, Viewport } from 'next'
-import { Baloo_2, Plus_Jakarta_Sans } from 'next/font/google'
+import { Onest, Unbounded } from 'next/font/google'
 import type { ReactNode } from 'react'
 import './globals.css'
 
 // Next downloads these at build time, so users never contact Google.
-const baloo = Baloo_2({ variable: '--font-baloo', subsets: ['latin'], weight: ['600', '700', '800'] })
-const jakarta = Plus_Jakarta_Sans({
-  variable: '--font-jakarta',
-  subsets: ['latin', 'latin-ext'],
+// Both include Russian letters, so Cyrillic text matches the rest of the app.
+const unbounded = Unbounded({
+  variable: '--font-unbounded',
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
+  weight: ['600', '700', '800'],
+})
+const onest = Onest({
+  variable: '--font-onest',
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   weight: ['500', '700', '800'],
 })
 
@@ -30,7 +35,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${baloo.variable} ${jakarta.variable}`}>
+    <html lang="en" className={`${unbounded.variable} ${onest.variable}`}>
       <body>{children}</body>
     </html>
   )

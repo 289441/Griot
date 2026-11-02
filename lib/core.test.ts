@@ -11,6 +11,7 @@ import { alertMatches, computeRisk, stepKey } from './risk.ts'
 import { readAlertEvent, readNoticeEvent, readSignedFeed, signAlert, signNotice } from './signing.ts'
 import { cleanData, EMPTY_DATA } from './storage.ts'
 import type { Alert, AppData, Profile } from './types.ts'
+import { updatedAgo } from './words.ts'
 
 const profile: Profile = {
   country: 'NG',
@@ -278,5 +279,16 @@ describe('backup safety', () => {
   it('survives junk without crashing', () => {
     expect(cleanData('junk').profile).toBeNull()
     expect(cleanData({ profile: { country: 'XX' } }).profile).toBeNull()
+  })
+})
+
+describe('updated time', () => {
+  const now = new Date('2026-11-02T12:00:00Z')
+  it('says how long ago in short words', () => {
+    expect(updatedAgo(null, now)).toBe('Not updated yet')
+    expect(updatedAgo('2026-11-02T11:59:30Z', now)).toBe('Updated just now')
+    expect(updatedAgo('2026-11-02T11:55:00Z', now)).toBe('Updated 5 min ago')
+    expect(updatedAgo('2026-11-02T09:00:00Z', now)).toBe('Updated 3 h ago')
+    expect(updatedAgo('2026-11-01T11:00:00Z', now)).toBe('Updated 1 day ago')
   })
 })

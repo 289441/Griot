@@ -15,8 +15,8 @@ Fonts, shapes, spacing and layout are the same in both. Only the light changes. 
 
 ## Type
 
-- **Baloo 2** (`font-display`) for the risk level, titles and headings.
-- **Plus Jakarta Sans** for everything else. Running text is 16px, and never below 14px except labels.
+- **Unbounded** (`font-display`) for the risk level, titles and headings. It is wide, so headings run smaller than usual: titles 24px, headings 18px.
+- **Onest** for everything else. Both include Russian letters. Running text is 16px, and never below 14px except labels.
 - **Numbers** use the `num` utility so values never jitter.
 - **Labels** use the `label-tag` utility: 12px bold uppercase, for short labels only.
 

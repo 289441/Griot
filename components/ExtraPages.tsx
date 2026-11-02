@@ -51,7 +51,7 @@ export function CheckPage({ alerts }: { alerts: Alert[] }) {
       {result && (
         <div className={`grid animate-pop justify-items-center gap-1 rounded-card p-6 text-center ${result.tint}`}>
           <result.Icon size={44} aria-hidden />
-          <p className="font-display text-3xl font-extrabold">{result.word}</p>
+          <p className="font-display text-2xl font-bold">{result.word}</p>
           <p className="text-ink">{result.hint}</p>
         </div>
       )}

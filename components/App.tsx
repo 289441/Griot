@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useSyncExternalStore } from 'react'
+import { useCallback, useEffect, useState, useSyncExternalStore } from 'react'
 import { isIOS, isInstalled } from '../lib/install.ts'
 import { syncTopics } from '../lib/push.ts'
 import { go, useRoute } from '../lib/router.ts'
@@ -13,6 +13,7 @@ import InstallPage from './InstallPage.tsx'
 import More from './More.tsx'
 import NavBar from './NavBar.tsx'
 import PlanPage from './PlanPage.tsx'
+import PullToRefresh from './PullToRefresh.tsx'
 import ProfilePage from './ProfilePage.tsx'
 import Report from './Report.tsx'
 import ReporterPage from './ReporterPage.tsx'
@@ -35,7 +36,15 @@ function Main() {
   const [online, setOnline] = useState(true)
   const [skippedInstall, setSkippedInstall] = useState(false)
   const [country, setCountry] = useState('')
+  const [refreshing, setRefreshing] = useState(false)
   const hasProfile = data.profile !== null
+
+  // A pull or a tap on Refresh fetches the feed now, instead of waiting.
+  const refreshNow = useCallback(async () => {
+    setRefreshing(true)
+    setOnline(await refreshFeed())
+    setRefreshing(false)
+  }, [])
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
@@ -106,6 +115,7 @@ function Main() {
 
   return (
     <div className="min-h-dvh">
+      <PullToRefresh refreshing={refreshing} onRefresh={refreshNow} />
       <a
         href="#main"
         onClick={(event) => {
@@ -148,7 +158,7 @@ function Main() {
         ) : screen === 'alert' ? (
           <AlertDetail id={param} alerts={alerts} data={data} profile={data.profile} />
         ) : (
-          <Home alerts={alerts} data={data} profile={data.profile} />
+          <Home alerts={alerts} data={data} profile={data.profile} refreshing={refreshing} onRefresh={refreshNow} />
         )}
       </main>
       <NavBar route={screen} />
