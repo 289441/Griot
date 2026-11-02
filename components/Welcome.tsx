@@ -4,6 +4,7 @@ import { btnPrimary } from '../lib/styles.ts'
 import Logo from './Logo.tsx'
 
 const COUNT_MS = 1400
+const REPO_URL = 'https://github.com/289441/Griot'
 
 // Counts up to the real number, because watching it climb is the point.
 function useCountUp(target: number) {
@@ -73,7 +74,11 @@ export default function Welcome({ onStart }: { onStart: () => void }) {
           Protect my money
         </button>
         <p className="mt-3 text-center text-sm text-muted">
-          Free. No sign up. ·{' '}
+          Free. No sign up.{' '}
+          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="underline">
+            Open source.
+          </a>{' '}
+          ·{' '}
           <a href={HEADLINE.url} target="_blank" rel="noopener noreferrer" className="underline">
             Source: {HEADLINE.source}
           </a>
