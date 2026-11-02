@@ -77,7 +77,7 @@ You must add HTTPS in front, because PWAs and push need it. Cloudflare is the si
 
 ```cron
 */5 * * * * curl -fsS -H "Authorization: Bearer $CRON_SECRET" https://your-app/api/cron/tick
-*/15 * * * * curl -fsS -X POST -H "Authorization: Bearer $BOT_SECRET" https://your-admin/api/poll
+*/10 * * * * curl -fsS -X POST -H "Authorization: Bearer $BOT_SECRET" https://your-admin/api/poll
 0 9 * * 1 curl -fsS -H "Authorization: Bearer $CRON_SECRET" https://your-app/api/cron/weekly
 ```
 
