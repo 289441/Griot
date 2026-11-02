@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@theme inline {
+  /* Fonts come from next/font in layout.tsx */
+  --font-sans: var(--font-jakarta), "Segoe UI", sans-serif;
+  --font-display: var(--font-baloo), "Trebuchet MS", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+    scroll-padding-bottom: 96px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+  /* No double tap zoom delay on buttons and links */
+  a,
+  button,
+  input,
+  select,
+  label {
+    touch-action: manipulation;
+  }
+  body {
+    @apply bg-ground text-ink antialiased;
+    font-weight: 500;
+    overflow-wrap: break-word;
+  }
+  :focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Every number: tabular, so values never jitter */
+@utility num {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
+/* Short uppercase labels on chips and sections */
+@utility label-tag {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@utility glass {
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+/* Big moments pop in with a small overshoot */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-pop {
+  animation: pop-in 320ms ease-out both;
+}
+
+@utility animate-rise {
+  animation: rise-in 280ms ease-out both;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}

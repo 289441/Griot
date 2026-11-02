@@ -1,0 +1,274 @@
+{
+  "version": 1,
+  "generated_at": "2026-11-01T08:00:00Z",
+  "alerts": [
+    {
+      "id": "sample-ng-account-id-freeze",
+      "title": "Banks told to freeze accounts without a linked ID",
+      "summary": "In this example, the central bank gives banks and fintech apps 30 days to restrict any account not linked to a national ID. A restricted account can receive money but cannot send it or withdraw it.",
+      "countries": [
+        "NG"
+      ],
+      "affects": [
+        "bank",
+        "fintech"
+      ],
+      "category": "freeze",
+      "risk": "high",
+      "status": "confirmed",
+      "actions": [
+        "Open each banking app and check that your ID is linked to your account.",
+        "Link any missing ID this week, before the rush at branches starts.",
+        "Keep enough money for two weeks of expenses in a second account you have also checked."
+      ],
+      "source_url": "https://www.cbn.gov.ng/",
+      "date": "2026-10-29",
+      "sample": true
+    },
+    {
+      "id": "sample-ng-naira-slide",
+      "title": "Naira falls fast after new rate guidance",
+      "summary": "In this example, the naira loses a tenth of its value in two weeks. Money sitting in naira buys less each week, and prices of imported goods usually rise soon after.",
+      "countries": [
+        "NG"
+      ],
+      "affects": [
+        "bank",
+        "cash",
+        "fintech"
+      ],
+      "category": "devaluation",
+      "risk": "medium",
+      "status": "confirmed",
+      "actions": [
+        "Work out how many months of expenses you hold in naira.",
+        "Buy planned essentials now if their prices usually follow the exchange rate.",
+        "Decide how much of your savings to hold in something other than naira, using legal and licensed routes only."
+      ],
+      "source_url": "https://www.cbn.gov.ng/",
+      "date": "2026-10-27",
+      "sample": true
+    },
+    {
+      "id": "sample-ng-foreign-income-declare",
+      "title": "Freelancers may need to explain foreign payments",
+      "summary": "In this example, banks are reported to be preparing to ask for invoices on incoming foreign payments. Payments without paperwork could be held for review.",
+      "countries": [
+        "NG"
+      ],
+      "affects": [
+        "bank"
+      ],
+      "earners": [
+        "freelance_foreign"
+      ],
+      "category": "central_bank",
+      "risk": "medium",
+      "status": "rumor",
+      "actions": [
+        "Keep an invoice or contract for every foreign payment you receive.",
+        "Ask your bank what documents it would need for an incoming transfer."
+      ],
+      "source_url": "https://www.cbn.gov.ng/",
+      "date": "2026-10-31",
+      "sample": true
+    },
+    {
+      "id": "sample-ar-dollar-limit",
+      "title": "Monthly dollar purchase limit cut",
+      "summary": "In this example, the central bank lowers how many dollars each person can buy per month through banks. Dollars already in your own account are not touched, but buying more gets harder.",
+      "countries": [
+        "AR"
+      ],
+      "affects": [
+        "bank",
+        "foreign_currency"
+      ],
+      "category": "capital_controls",
+      "risk": "high",
+      "status": "confirmed",
+      "actions": [
+        "Check your bank's new monthly limit before planning any purchase.",
+        "List any dollar payments due in the next three months.",
+        "Ask your bank in writing how the rule applies to money already in your account."
+      ],
+      "source_url": "https://www.bcra.gob.ar/",
+      "date": "2026-10-28",
+      "sample": true
+    },
+    {
+      "id": "sample-tr-exchange-limits",
+      "title": "Local crypto exchanges may face new deposit limits",
+      "summary": "In this example, reports say regulators are considering a cap on monthly deposits to crypto exchanges. Nothing has been published yet.",
+      "countries": [
+        "TR"
+      ],
+      "affects": [
+        "exchange"
+      ],
+      "category": "exchange_ban",
+      "risk": "medium",
+      "status": "rumor",
+      "actions": [
+        "Do not make rushed moves on a rumor. Wait for an official notice.",
+        "Check that you can access your exchange account and that your recovery details are current."
+      ],
+      "source_url": "https://www.spk.gov.tr/",
+      "date": "2026-10-30",
+      "sample": true
+    },
+    {
+      "id": "sample-ke-mobile-money-fee",
+      "title": "Higher fee on large mobile money transfers",
+      "summary": "In this example, a new fee applies to mobile money transfers above a set amount. Everyday transfers are not affected, but large ones cost more.",
+      "countries": [
+        "KE"
+      ],
+      "affects": [
+        "fintech"
+      ],
+      "category": "central_bank",
+      "risk": "low",
+      "status": "confirmed",
+      "actions": [
+        "Check whether any regular payment you make is above the new limit."
+      ],
+      "source_url": "https://www.centralbank.go.ke/",
+      "date": "2026-10-26",
+      "sample": true
+    },
+    {
+      "id": "sample-in-exchange-reporting",
+      "title": "Exchanges may have to report more customer activity",
+      "summary": "In this example, reports say exchanges could soon share more detail about customer trades with tax authorities. This would not stop you from trading, but it could change what you must declare.",
+      "countries": [
+        "IN"
+      ],
+      "affects": [
+        "exchange"
+      ],
+      "category": "exchange_ban",
+      "risk": "low",
+      "status": "rumor",
+      "actions": [
+        "Download your full trade history from each exchange while it is easy to get.",
+        "Keep records of what you bought, when, and for how much."
+      ],
+      "source_url": "https://www.rbi.org.in/",
+      "date": "2026-10-25",
+      "sample": true
+    },
+    {
+      "id": "sample-eu-cash-limit",
+      "title": "New upper limit on cash payments",
+      "summary": "In this example, large cash purchases above a fixed amount become illegal for shops and sellers. Holding cash stays legal, but spending a lot of it at once does not.",
+      "countries": [
+        "DE",
+        "FR",
+        "ES",
+        "IT",
+        "NL"
+      ],
+      "affects": [
+        "cash"
+      ],
+      "category": "central_bank",
+      "risk": "medium",
+      "status": "confirmed",
+      "actions": [
+        "Check the limit that applies in your country.",
+        "Plan any large purchase so that it follows the new rule."
+      ],
+      "source_url": "https://www.ecb.europa.eu/",
+      "date": "2026-10-22",
+      "sample": true
+    },
+    {
+      "id": "sample-us-wallet-reporting",
+      "title": "Proposal to report large transfers to private wallets",
+      "summary": "In this example, a proposal would make exchanges record transfers above a set size to wallets you control yourself. It is still open for comment and is not law.",
+      "countries": [
+        "US"
+      ],
+      "affects": [
+        "exchange",
+        "bitcoin"
+      ],
+      "category": "central_bank",
+      "risk": "low",
+      "status": "rumor",
+      "actions": [
+        "Keep a record of every withdrawal from an exchange to your own wallet.",
+        "Follow the proposal so that you know if it becomes a final rule."
+      ],
+      "source_url": "https://www.fincen.gov/",
+      "date": "2026-10-24",
+      "sample": true
+    },
+    {
+      "id": "sample-global-exchange-withdrawals",
+      "title": "Large exchange pauses withdrawals for some users",
+      "summary": "In this example, a well known exchange stops withdrawals for 48 hours and blames a technical upgrade. Pauses like this have come before serious failures in the past, but they can also be routine.",
+      "countries": [
+        "*"
+      ],
+      "affects": [
+        "exchange"
+      ],
+      "category": "freeze",
+      "risk": "medium",
+      "status": "rumor",
+      "actions": [
+        "Test a small withdrawal from every exchange you use.",
+        "Keep only what you actively trade on an exchange.",
+        "If you hold Bitcoin long term, learn how self custody works before you move anything large."
+      ],
+      "source_url": "https://www.bis.org/",
+      "date": "2026-10-31",
+      "sample": true
+    },
+    {
+      "id": "sample-global-stablecoin-freeze",
+      "title": "Stablecoin issuer freezes more wallets",
+      "summary": "In this example, a major dollar stablecoin company freezes a batch of wallets at the request of authorities. Stablecoin companies can block coins, which is different from Bitcoin you hold yourself.",
+      "countries": [
+        "*"
+      ],
+      "affects": [
+        "exchange",
+        "foreign_currency"
+      ],
+      "category": "freeze",
+      "risk": "medium",
+      "status": "confirmed",
+      "actions": [
+        "Check how much of your savings depends on a single stablecoin.",
+        "Avoid receiving stablecoins from sources you cannot identify."
+      ],
+      "source_url": "https://www.bis.org/",
+      "date": "2026-10-23",
+      "sample": true
+    },
+    {
+      "id": "sample-global-seed-phrase-scam",
+      "title": "Fake regulator messages asking for wallet recovery words",
+      "summary": "In this example, scammers use news of new rules to send fake compliance messages. No real regulator will ever ask for your wallet's recovery words.",
+      "countries": [
+        "*"
+      ],
+      "affects": [
+        "bitcoin"
+      ],
+      "category": "freeze",
+      "risk": "medium",
+      "status": "confirmed",
+      "actions": [
+        "Never type your recovery words into a website or send them to anyone.",
+        "Check that your recovery words are stored safely offline."
+      ],
+      "source_url": "https://www.bis.org/",
+      "date": "2026-10-30",
+      "sample": true
+    }
+  ]
+}

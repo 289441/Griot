@@ -1,0 +1,15 @@
+# Local database only. Production uses a hosted Postgres.
+services:
+  db:
+    image: postgres:17.6-alpine
+    environment:
+      POSTGRES_USER: freedom
+      POSTGRES_PASSWORD: freedom
+      POSTGRES_DB: freedom
+    ports:
+      - "5433:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata:

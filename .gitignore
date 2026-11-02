@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+public/sw.js
+
+# Secrets: only .env.example is shared
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Hosting and tool state
+.vercel/
+.claude/settings.local.json
+
+# Test output
+coverage/
+test-results/
+playwright-report/
+
+# Logs and system files
+*.log
+.DS_Store
+Thumbs.db
+*:Zone.Identifier

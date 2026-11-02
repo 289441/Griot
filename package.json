@@ -1,0 +1,52 @@
+{
+  "name": "griot",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run validate:alerts && next build",
+    "start": "next start",
+    "test": "vitest run",
+    "typecheck": "next typegen && tsc --noEmit",
+    "keys": "node scripts/generate-keys.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "send-test": "node scripts/send-test.mjs",
+    "tick": "node scripts/tick.mjs",
+    "validate:alerts": "node scripts/validate-alerts.ts",
+    "design:sync": "node scripts/sync-design.mjs",
+    "predev": "npm run design:sync && npm run sw:build",
+    "prebuild": "npm run design:sync && npm run sw:build",
+    "lint": "eslint",
+    "db:up": "docker compose up -d db",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:seed": "node scripts/seed-samples.ts",
+    "sw:build": "node scripts/build-sw.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "lucide-react": "^1.66.0",
+    "next": "^16.4.3",
+    "nostr-tools": "^2.25.4",
+    "postgres": "^4.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/web-push": "^3.6.4",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.3",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,121 @@
+/* Griot. Generated from design-system/tokens.json by scripts/sync-design.mjs. Do not edit. */
+
+:root {
+  color-scheme: light;
+  --ground: #eef3ec;
+  --surface: #ffffff;
+  --glass: rgba(255, 255, 255, 0.9);
+  --sunken: #f1f4f1;
+  --line: #e0e7e1;
+  --ink: #1d2b22;
+  --muted: #5d6c62;
+  --accent: #15803d;
+  --on-accent: #ffffff;
+  --accent-ink: #15803d;
+  --accent-soft: #e3f6ea;
+  --danger: #c9302c;
+  --danger-soft: #fde8e7;
+  --warn: #a35400;
+  --warn-soft: #fff1dc;
+  --info: #1d6fb8;
+  --info-soft: #e4f0fb;
+  --risk-low: var(--info);
+  --risk-medium: var(--warn);
+  --risk-high: var(--danger);
+  --focus-ring: #1d6fb8;
+  --scrim: rgba(29, 43, 34, 0.35);
+  --elev-1: 0 4px 14px rgba(29, 43, 34, 0.12);
+  --elev-2: 0 14px 36px rgba(29, 43, 34, 0.2);
+  --tap-min: 44px;
+  --glass-blur: 14px;
+}
+
+/* Night follows the device's dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ground: #0f1430;
+    --surface: #1b2140;
+    --glass: rgba(24, 30, 60, 0.84);
+    --sunken: rgba(255, 255, 255, 0.08);
+    --line: rgba(255, 255, 255, 0.12);
+    --ink: #f3f1ff;
+    --muted: #a9acd0;
+    --accent: #ffb547;
+    --on-accent: #1a1530;
+    --accent-ink: #ffc76e;
+    --accent-soft: rgba(255, 181, 71, 0.16);
+    --danger: #ff7a7a;
+    --danger-soft: rgba(255, 122, 122, 0.16);
+    --warn: #ffc76e;
+    --warn-soft: rgba(255, 199, 110, 0.16);
+    --info: #8fc8ff;
+    --info-soft: rgba(143, 200, 255, 0.14);
+    --focus-ring: #ffc76e;
+    --scrim: rgba(5, 8, 20, 0.6);
+    --elev-1: 0 8px 26px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    --elev-2: 0 18px 44px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* A section can always be night on its own, like the level 3 alarm */
+[data-theme="night"] {
+  color-scheme: dark;
+  --ground: #0f1430;
+  --surface: #1b2140;
+  --glass: rgba(24, 30, 60, 0.84);
+  --sunken: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.12);
+  --ink: #f3f1ff;
+  --muted: #a9acd0;
+  --accent: #ffb547;
+  --on-accent: #1a1530;
+  --accent-ink: #ffc76e;
+  --accent-soft: rgba(255, 181, 71, 0.16);
+  --danger: #ff7a7a;
+  --danger-soft: rgba(255, 122, 122, 0.16);
+  --warn: #ffc76e;
+  --warn-soft: rgba(255, 199, 110, 0.16);
+  --info: #8fc8ff;
+  --info-soft: rgba(143, 200, 255, 0.14);
+  --focus-ring: #ffc76e;
+  --scrim: rgba(5, 8, 20, 0.6);
+  --elev-1: 0 8px 26px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --elev-2: 0 18px 44px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Radii use Tailwind's names: rounded-pill, rounded-card */
+@theme static {
+  --radius-pill: 999px;
+  --radius-card: 22px;
+  --radius-bubble: 16px;
+  --radius-chip: 10px;
+}
+
+/* Utilities follow the theme: bg-surface, text-ink, shadow-elev-1 */
+@theme inline {
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-glass: var(--glass);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-risk-low: var(--risk-low);
+  --color-risk-medium: var(--risk-medium);
+  --color-risk-high: var(--risk-high);
+  --color-focus-ring: var(--focus-ring);
+  --color-scrim: var(--scrim);
+  --shadow-elev-1: var(--elev-1);
+  --shadow-elev-2: var(--elev-2);
+}
