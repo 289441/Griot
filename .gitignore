@@ -28,3 +28,9 @@ playwright-report/
 .DS_Store
 Thumbs.db
 *:Zone.Identifier
+
+# Private notes and local tooling, kept off the public repo
+TODO.md
+LOADTEST.md
+AGENTS.md
+.claude/

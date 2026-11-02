@@ -32,8 +32,3 @@ Names of anonymous reporters, email, phone, balances, wallet addresses, how some
 ## Outside our control
 
 Hosting and CDN logs can hold IP addresses, so turn logs down and keep them short. Push services can see that a device received a push. Reporter proof links are only shown to admins.
-
-## Still to do
-
-- Have a lawyer read the Privacy and Terms pages, and check the laws where you launch. Nigeria's NDPA, for example, covers personal data.
-- Add a scheduled clean up of old rejected reports.

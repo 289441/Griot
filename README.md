@@ -74,7 +74,7 @@ Real alerts are written in admin and saved signed. Samples live in `scripts/samp
 
 ## More docs
 
-[DEPLOY](DEPLOY.md) · [SECURITY](SECURITY.md) · [PRIVACY](PRIVACY.md) · [LOADTEST](LOADTEST.md) · [TODO](TODO.md) · [CONTRIBUTING](CONTRIBUTING.md) · [TRADEMARK](TRADEMARK.md)
+[DEPLOY](DEPLOY.md) · [SECURITY](SECURITY.md) · [PRIVACY](PRIVACY.md) · [CONTRIBUTING](CONTRIBUTING.md) · [TRADEMARK](TRADEMARK.md)
 
 ## How alerts reach people
 
