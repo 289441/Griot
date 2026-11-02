@@ -1,7 +1,7 @@
 // Service worker: a helper that runs in the background for offline use and push.
 import { readNoticeEvent } from '../lib/signing.ts'
 
-const CACHE = 'griot-v6'
+const CACHE = 'griot-v7'
 const ICON = '/icons/icon-192.png'
 
 // Saves the page plus every file it references, so offline works after one visit.

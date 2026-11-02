@@ -44,6 +44,10 @@ The word always shows beside the colour, because many people are colour blind.
 
 Soft, never glitchy. Press scales to 0.97. Hover lifts 1px. Big moments pop in. Animate `transform` and `opacity` only, and respect reduced motion.
 
+## Logo
+
+The Levels mark: three arcs for the three alert levels, two lit, over a dot. Lamp orange arcs and a dim outer arc on deep blue. No needle, so it never reads as a car gauge. `components/Logo.tsx` draws it in the app, and `npm run icons` draws the same mark into every icon in `public/icons`.
+
 ## Voice
 
 Plain English in sentence case, at notification length. Titles and buttons are 1 to 4 words where possible. Calm and direct, never dramatic, even at level 3.

@@ -1,7 +1,7 @@
-import { ShieldCheck } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { HACKS, HEADLINE } from '../lib/hacks.ts'
 import { btnPrimary } from '../lib/styles.ts'
+import Logo from './Logo.tsx'
 
 const COUNT_MS = 1400
 
@@ -36,7 +36,7 @@ export default function Welcome({ onStart }: { onStart: () => void }) {
     >
       <div className="mx-auto flex w-full max-w-md flex-1 flex-col">
         <p className="flex items-center gap-2 font-display text-xl font-bold">
-          <ShieldCheck className="text-accent" size={24} aria-hidden />
+          <Logo />
           <span translate="no">Griot</span>
         </p>
 
